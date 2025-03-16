@@ -21,6 +21,11 @@ This is a simple React Native application that fetches and displays user informa
 
 ## Screenshots
 Here are some screenshots of the app:
+![one](https://github.com/user-attachments/assets/121bf841-306a-4f6f-b59f-1b097ea7f302)
+![three](https://github.com/user-attachments/assets/853baf20-ed16-4d4b-87a9-a384e18b21f3)
+![two](https://github.com/user-attachments/assets/c0edab1e-ee4f-4e23-a161-0a9b9d71d637)
+
+
 
 
 
