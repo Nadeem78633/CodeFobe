@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ActivityIndicator,
+  ScrollView,
+} from "react-native";
 import { fetchUsers } from "../services/api";
 import UserCard from "../components/UserCard";
 import NavigationButtons from "../components/NavigationButtons";
@@ -52,18 +58,18 @@ const Home = () => {
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <UserCard user={users[currentIndex]} />
       <NavigationButtons onNext={handleNext} onPrevious={handlePrevious} />
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    marginTop: 80,
+    flexGrow: 1, 
     alignItems: "center",
+    paddingTop: 80,
   },
   center: {
     flex: 1,

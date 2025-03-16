@@ -2,62 +2,36 @@ import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 
 const UserCard = ({ user }) => {
+  const userFields = [
+    { label: "ID:", value: user.id },
+    { label: "UID:", value: user.uid },
+    { label: "Password:", value: user.password },
+    { label: "First Name:", value: user.first_name },
+    { label: "Last Name:", value: user.last_name },
+    { label: "Username:", value: user.username },
+    { label: "Email:", value: user.email },
+  ];
+
+  const renderRow = ({ label, value }, index) => (
+    <View key={label}>
+      <View style={styles.row}>
+        <Text style={styles.label}>{label}</Text>
+        <Text style={styles.value}  ellipsizeMode="tail">
+          {value}
+        </Text>
+      </View>
+      {index < userFields.length - 1 && label !== "Email:" && (
+        <View style={styles.divider} />
+      )}
+    </View>
+  );
+
   return (
     <View style={styles.card}>
-      {/* Circle around the avatar */}
       <View style={styles.avatarContainer}>
         <Image source={{ uri: user.avatar }} style={styles.avatar} />
       </View>
-
-      {/* User information in two columns */}
-      <View style={styles.row}>
-        <Text style={styles.label}>ID:</Text>
-        <Text style={styles.value} numberOfLines={1} ellipsizeMode="tail">
-          {user.id}
-        </Text>
-      </View>
-
-      <View style={styles.row}>
-        <Text style={styles.label}>UID:</Text>
-        <Text style={styles.value}  ellipsizeMode="tail">
-          {user.uid}
-        </Text>
-      </View>
-
-      <View style={styles.row}>
-        <Text style={styles.label}>Password:</Text>
-        <Text style={styles.value} numberOfLines={1} ellipsizeMode="tail">
-          {user.password}
-        </Text>
-      </View>
-
-      <View style={styles.row}>
-        <Text style={styles.label}>First Name:</Text>
-        <Text style={styles.value} numberOfLines={1} ellipsizeMode="tail">
-          {user.first_name}
-        </Text>
-      </View>
-
-      <View style={styles.row}>
-        <Text style={styles.label}>Last Name:</Text>
-        <Text style={styles.value} numberOfLines={1} ellipsizeMode="tail">
-          {user.last_name}
-        </Text>
-      </View>
-
-      <View style={styles.row}>
-        <Text style={styles.label}>Username:</Text>
-        <Text style={styles.value} numberOfLines={1} ellipsizeMode="tail">
-          {user.username}
-        </Text>
-      </View>
-
-      <View style={styles.row}>
-        <Text style={styles.label}>Email:</Text>
-        <Text style={styles.value} numberOfLines={1} ellipsizeMode="tail">
-          {user.email}
-        </Text>
-      </View>
+      {userFields.map(renderRow)}
     </View>
   );
 };
@@ -65,27 +39,27 @@ const UserCard = ({ user }) => {
 const styles = StyleSheet.create({
   card: {
     width: "90%",
-    padding: 20, 
+    padding: 20,
     alignItems: "center",
-    marginVertical: 10,
-    backgroundColor: "#ffffff",
-    borderRadius: 10, 
-    shadowColor: "#000", 
+   
+   backgroundColor: "#ffffff",
+    borderRadius: 10,
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    elevation: 3, 
+    elevation: 3,
   },
   avatarContainer: {
     width: 120,
     height: 120,
-    borderRadius: 60, 
+    borderRadius: 60,
     borderWidth: 1,
-    borderColor: "black", 
+    borderColor: "black",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 50,
-    backgroundColor: "white", 
+    marginBottom: 10,
+    backgroundColor: "white",
   },
   avatar: {
     width: 100,
@@ -93,22 +67,27 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   row: {
-    flexDirection: "row", 
-    width: "100%", 
+    flexDirection: "row",
+    width: "100%",
     marginTop: 30,
   },
   label: {
     fontSize: 16,
     color: "#333333",
     fontWeight: "bold",
-    width: "30%", 
+    width: "30%",
   },
   value: {
     fontSize: 16,
-    color: "#333333", 
-    flex: 1, 
-    flexShrink: 1, 
-    marginLeft: 10, 
+    color: "#333333",
+    flex: 1,
+    flexShrink: 1,
+    marginLeft: 10,
+  },
+  divider: {
+    height: 1,
+    backgroundColor: "#e0e0e0",
+    marginTop: 10,
   },
 });
 
