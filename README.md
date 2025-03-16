@@ -22,11 +22,6 @@ This is a simple React Native application that fetches and displays user informa
 ## Screenshots
 Here are some screenshots of the app:
 ![one](https://github.com/user-attachments/assets/121bf841-306a-4f6f-b59f-1b097ea7f302)
-![three](https://github.com/user-attachments/assets/853baf20-ed16-4d4b-87a9-a384e18b21f3)
-![two](https://github.com/user-attachments/assets/c0edab1e-ee4f-4e23-a161-0a9b9d71d637)
-
-
-
 
 
 ## Installation
@@ -88,70 +83,3 @@ The app fetches user data from the **Random Data API**:
 - Endpoint: `https://random-data-api.com/api/users/random_user?size=80`
 - The `size` parameter specifies the number of users to fetch (e.g., `size=80` fetches 80 users).
 
----
-
-## Evaluation Criteria
-This project was evaluated based on the following criteria:
-1. **Code Quality**: Clean, organized, and well-commented code.
-2. **React Native Usage**: Efficient use of React Native components and navigation.
-3. **Data Handling**: Successful fetching, processing, and display of API data.
-4. **UI Design**: Aesthetically pleasing and responsive user interface.
-5. **Error Handling**: Proper management of edge cases and potential errors.
-
----
-
-## Improvements
-Here are some potential improvements for the app:
-1. **Error Handling**:
-   - Display user-friendly error messages for API failures.
-   - Handle edge cases (e.g., missing or invalid data).
-
-2. **UI Enhancements**:
-   - Add shadows and rounded corners to the card for a modern look.
-   - Improve the spacing and alignment of user information fields.
-
-3. **Loading State**:
-   - Display a loading indicator while fetching data.
-
-4. **Testing**:
-   - Add unit tests for components and services using **Jest** and **React Testing Library**.
-
----
-
-## Technologies Used
-- **React Native**: For building the mobile app.
-- **Expo**: For simplifying the development and testing process.
-- **Random Data API**: For fetching user data.
-- **React Native Paper** (optional): For pre-styled components and a modern UI.
-
----
-
-## Contributing
-If you'd like to contribute to this project, follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature-name`).
-5. Open a pull request.
-
----
-
-## License
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
-
-## Contact
-If you have any questions or feedback, feel free to reach out:
-- **Email**: your-email@example.com
-- **GitHub**: [your-username](https://github.com/your-username)
-
----
-
-## Acknowledgments
-- Thanks to **Random Data API** for providing the user data.
-- Inspired by React Native tutorials and documentation.
-
----
-
-This **README.md** file provides a comprehensive overview of your project and instructions for running it locally. Make sure to replace placeholders (e.g., `your-username`, `your-email@example.com`) with your actual information. You can also add screenshots to the `screenshots/` folder and update the **Screenshots** section accordingly.
