@@ -21,7 +21,8 @@ This is a simple React Native application that fetches and displays user informa
 
 ## Screenshots
 Here are some screenshots of the app:
-![one](https://github.com/user-attachments/assets/121bf841-306a-4f6f-b59f-1b097ea7f302)
+![Screenshot_2025-03-16-12-53-27-842_host exp exponent](https://github.com/user-attachments/assets/89f5e15e-a856-48a4-a871-b6411635e52f)
+
 
 
 ## Installation
